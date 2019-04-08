@@ -2,5 +2,5 @@ package com.main;
 
 public enum ID {
 
-	Player(),BasicEnemy(),Player2(),AdvancedEnemy(),EnemyShip();
+	Player(),BasicEnemy(),Player2(),AdvancedEnemy(),EnemyShip(),SuperEnemy();
 }

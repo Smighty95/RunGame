@@ -35,7 +35,7 @@ public class Player extends GameObject {
 	private void collision() {
 		for(int i=0;i<handler.object.size();i++) {
 			GameObject tempObject=handler.object.get(i);
-			if(tempObject.getID()==ID.BasicEnemy || tempObject.getID()==ID.AdvancedEnemy) {
+			if(tempObject.getID()==ID.BasicEnemy || tempObject.getID()==ID.AdvancedEnemy || tempObject.getID()==ID.EnemyShip || tempObject.getID()==ID.SuperEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					game.GameState=State.End;
 					handler.clearObjects();
@@ -45,8 +45,7 @@ public class Player extends GameObject {
 	}
 	@Override
 	public void render(Graphics g) {
-		if(id==ID.Player2) {
-			g.setColor(Color.YELLOW);
+		if(id==ID.Player2) {			g.setColor(Color.YELLOW);
 			g.fillOval((int)x,(int)y, 30, 30);
 			//g.drawImage(player_image2,(int)x,(int)y,null);
 		}

@@ -35,7 +35,7 @@ public class Player extends GameObject {
 	private void collision() {
 		for(int i=0;i<handler.object.size();i++) {
 			GameObject tempObject=handler.object.get(i);
-			if(tempObject.getID()==ID.BasicEnemy || tempObject.getID()==ID.AdvancedEnemy || tempObject.getID()==ID.EnemyShip || tempObject.getID()==ID.SuperEnemy) {
+			if(tempObject.getID()==ID.BasicEnemy || tempObject.getID()==ID.AdvancedEnemy || tempObject.getID()==ID.EnemyShip|| tempObject.getID()==ID.EnemyShip2 || tempObject.getID()==ID.SuperEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					game.GameState=State.End;
 					handler.clearObjects();

@@ -6,7 +6,7 @@ public class Spawn {
 	private Handler handler;
 	private HUD hud;
 	private Random r=new Random();
-	private int b=0,no;
+	private int b=0,no,normalenemy=0;
 
 	public Spawn(Handler handler,HUD hud) {
 		this.handler=handler;
@@ -131,10 +131,28 @@ public class Spawn {
 						}
 						no=10;
 						handler.addObject(new EnemyShip(0,0,ID.EnemyShip));
+						handler.addObject(new EnemyShip2(Game.width-90,Game.height-110,ID.EnemyShip));
 					}
 					if(hud.getScore()%200==0 && no!=0) {
-						handler.addObject(new SuperEnemy(EnemyShip.posX,0,ID.SuperEnemy,handler));
+						if(no%2==0) {
+							handler.addObject(new SuperEnemy(EnemyShip.posX,0,ID.SuperEnemy,handler));
+							no--;
+						}
+						else {
+							handler.addObject(new SuperEnemy(EnemyShip2.posX,Game.height,ID.SuperEnemy,handler));
+							no--;
+						}
+						}
+					
+					if(hud.getScore()%500==0) {
+						normalenemy++;
+						if(normalenemy%2==0) {
+							handler.addObject(new BasicEnemy(EnemyShip.posX,0,ID.BasicEnemy));
+						}else {
+							handler.addObject(new BasicEnemy(EnemyShip.posX,Game.height,ID.BasicEnemy));
+						}
 					}
+						
 				}
 			}
 		}	

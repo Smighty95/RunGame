@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 public class HUD {
 	
-	private int score=9900;
+	private int score=1;
 
 	public void tick() {
 		score++;

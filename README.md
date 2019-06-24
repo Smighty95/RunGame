@@ -1,6 +1,3 @@
 # RunGame
 Running game
-Game is about running away from the enemies. There are several types of enemies. 
-Game is playable for 2 players. Commands are Num 8/5/4/6 for player 1 and W/S/A/D for player 2.
-Currently, it's still in dev. 
-If you read this, feel free to suggest some levels! 
+Still blueprint of a game. Its about running away from enemies. Can be player solo or with 1 more player. If you have any advices and suggestions, contact me via email milos1995sd@hotmail.com
